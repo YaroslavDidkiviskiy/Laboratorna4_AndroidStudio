@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Виберіть розмір поля"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerGridSize"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:popupBackground="#212121"
+        android:spinnerMode="dropdown"
+        android:paddingStart="16dp"
+        android:paddingEnd="32dp"
+        android:textColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X: 0 | O: 0"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginEnd="24dp"/>
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Час: 10"
+            android:textSize="18sp"
+            android:textColor="#03DAC5"/>
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="#1E1E1E"
+        android:padding="8dp"
+        android:alignmentMode="alignMargins"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:dividerPadding="8dp">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Скинути раунд"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3700B3"
+            android:paddingHorizontal="24dp"/>
+
+        <Button
+            android:id="@+id/newGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Нова гра"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#018786"
+            android:paddingHorizontal="24dp"
+            android:layout_marginStart="16dp"/>
+
+        <Button
+            android:id="@+id/showScoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Рахунок"
+            android:textColor="#03DAC5"
+            android:backgroundTint="#000000"
+            android:paddingHorizontal="24dp"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+</LinearLayout>
